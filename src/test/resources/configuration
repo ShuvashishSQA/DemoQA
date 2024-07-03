@@ -1,0 +1,5 @@
+baseURL = https://demoqa.com/
+browser = Chrome
+fullName = John Doe
+email = test@gmail.com
+currentAddress = 434,Noyatola, Chairman Goli
