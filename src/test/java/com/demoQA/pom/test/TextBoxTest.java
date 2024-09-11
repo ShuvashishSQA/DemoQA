@@ -5,7 +5,7 @@ import com.demoQA.pom.util.BaseTest;
 import org.testng.annotations.Test;
 
 public class TextBoxTest extends BaseTest {
-    TextBoxPage textBoxPage ;
+    //TextBoxPage textBoxPage = new TextBoxPage();
 
     public TextBoxTest(){
         super();
@@ -13,11 +13,11 @@ public class TextBoxTest extends BaseTest {
 
     @Test
     public void clickSubmitButton(){
-        textBoxPage.
-                inputFullName(getFullName()).
-                inputEmail(getEmail()).
-                inputCurrentAddress(getFullAddress()).
-                inputPermanentAddress(getFullAddress()).
-                clickSubmit();
+        new TextBoxPage()
+                .inputFullName(getFullName())
+                .inputEmail(getEmail())
+                .inputCurrentAddress(getFullAddress())
+                .inputPermanentAddress(getFullAddress())
+                .clickSubmit();
     }
 }

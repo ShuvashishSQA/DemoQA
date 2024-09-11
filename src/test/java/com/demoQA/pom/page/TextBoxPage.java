@@ -13,8 +13,10 @@ public class TextBoxPage extends BaseTest {
     WebElement elEmail;
     @FindBy (id= "currentAddress")
     WebElement elCurrentAddress;
-    @FindBy (xpath = "//input[@id=\"permanentAddress\"]")
+    @FindBy (id= "permanentAddress")
     WebElement elPermanentAddress;
+    @FindBy (id= "submit")
+    WebElement btnSubmit;
 
 
 
@@ -47,8 +49,8 @@ public class TextBoxPage extends BaseTest {
         return this;
     }
     public TextBoxPage clickSubmit(){
-        elEmail.isDisplayed();
-        elEmail.click();
+        btnSubmit.isDisplayed();
+        btnSubmit.click();
         return this;
     }
 

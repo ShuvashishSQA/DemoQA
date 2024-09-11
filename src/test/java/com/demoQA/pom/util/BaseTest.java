@@ -57,7 +57,7 @@ public abstract class BaseTest {
         driver.get(getBaseUrl());
 
         //before sending NoSuchElementException driver will wait at least 30 seconds by default.
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(300));
 
         //window will open in remaining space of the screen considering all the available window
         driver.manage().window().maximize();
