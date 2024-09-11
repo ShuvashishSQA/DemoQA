@@ -1,18 +1,18 @@
-package dev.demoQA.test.test;
+package com.demoQA.pom.test;
 
-import dev.demoQA.test.baseDemoQATest;
-import dev.demoQA.test.page.TextBoxPage;
+import com.demoQA.pom.page.TextBoxPage;
+import com.demoQA.pom.util.BaseTest;
 import org.testng.annotations.Test;
 
-public class TextBoxTest extends baseDemoQATest {
-    TextBoxPage textBoxPage = new TextBoxPage();
+public class TextBoxTest extends BaseTest {
+    TextBoxPage textBoxPage ;
 
     public TextBoxTest(){
         super();
     }
 
     @Test
-    public void clickSubmit(){
+    public void clickSubmitButton(){
         textBoxPage.
                 inputFullName(getFullName()).
                 inputEmail(getEmail()).

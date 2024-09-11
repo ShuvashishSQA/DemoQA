@@ -1,13 +1,13 @@
-package dev.demoQA.test.page;
+package com.demoQA.pom.page;
 
-import dev.demoQA.test.baseDemoQATest;
+import com.demoQA.pom.util.BaseTest;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class HomePage extends baseDemoQATest {
+public class HomePage extends BaseTest {
 
-    @FindBy(xpath = "//h5[text()= \"Elements\"]")
+    @FindBy(xpath = "//div[@class=\"card-body\"]//h5[text()=\"Elements\"]\n")
     WebElement btnElements;
 
 

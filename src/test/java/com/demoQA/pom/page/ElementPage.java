@@ -1,14 +1,14 @@
-package dev.demoQA.test.page;
+package com.demoQA.pom.page;
 
-import dev.demoQA.test.baseDemoQATest;
+import com.demoQA.pom.util.BaseTest;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 
-public class ElementPage extends baseDemoQATest {
+public class ElementPage extends BaseTest {
 
-    @FindBy (xpath = "//span[text()= \"Text Box\"]")
+    @FindBy (xpath = "//span[text()=\"Text Box\"]")
     WebElement btnTextBox;
 
     public ElementPage(){

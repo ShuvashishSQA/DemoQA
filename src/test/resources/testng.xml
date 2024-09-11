@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="DemoQA">
+    <test verbose="2" preserve-order="true" name="DemoQA">
+        <classes>
+            <class name="com.demoQA.pom.test.HomeTest">
+            </class>
+            <class name="com.demoQA.pom.test.ElementTest">
+            </class>
+            <class name="com.demoQA.pom.test.TextBoxTest">
+            </class>
+        </classes>
+    </test>
+</suite>

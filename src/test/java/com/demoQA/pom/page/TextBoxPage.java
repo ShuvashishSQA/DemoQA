@@ -1,17 +1,17 @@
-package dev.demoQA.test.page;
+package com.demoQA.pom.page;
 
-import dev.demoQA.test.baseDemoQATest;
+import com.demoQA.pom.util.BaseTest;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class TextBoxPage extends baseDemoQATest {
+public class TextBoxPage extends BaseTest {
 
-    @FindBy(xpath = "//input[@id=\"userName\"]")
+    @FindBy(id = "userName")
     WebElement elFullName;
-    @FindBy (xpath = "//input[@id=\"userEmail\"]")
+    @FindBy (id= "userEmail")
     WebElement elEmail;
-    @FindBy (xpath = "//input[@id=\"currentAddress\"]")
+    @FindBy (id= "currentAddress")
     WebElement elCurrentAddress;
     @FindBy (xpath = "//input[@id=\"permanentAddress\"]")
     WebElement elPermanentAddress;
