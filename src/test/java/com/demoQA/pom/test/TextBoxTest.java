@@ -18,6 +18,8 @@ public class TextBoxTest extends BaseTest {
                 .inputEmail(getEmail())
                 .inputCurrentAddress(getFullAddress())
                 .inputPermanentAddress(getFullAddress())
-                .clickSubmit();
+                .clickSubmit()
+                .clickPracticeForm()
+                .insertFirstName();
     }
 }

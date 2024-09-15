@@ -17,6 +17,10 @@ public class TextBoxPage extends BaseTest {
     WebElement elPermanentAddress;
     @FindBy (id= "submit")
     WebElement btnSubmit;
+    @FindBy(xpath = "//span[text()='Practice Form']")
+    WebElement btnPracticeForm;
+    @FindBy(id = "firstName")
+    WebElement elFirstName;
 
 
 
@@ -51,6 +55,19 @@ public class TextBoxPage extends BaseTest {
     public TextBoxPage clickSubmit(){
         btnSubmit.isDisplayed();
         btnSubmit.click();
+        return this;
+    }
+
+    public TextBoxPage clickPracticeForm(){
+        btnPracticeForm.isDisplayed();
+        btnPracticeForm.click();
+        return this;
+    }
+
+    public TextBoxPage insertFirstName(){
+        elFirstName.isDisplayed();
+        elFirstName.clear();
+        elFirstName.sendKeys("Shuvo");
         return this;
     }
 
