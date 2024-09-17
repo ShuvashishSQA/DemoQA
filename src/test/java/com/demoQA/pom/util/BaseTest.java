@@ -72,12 +72,34 @@ public abstract class BaseTest {
     public String getFullName() {
         return properties.getProperty("fullName");
     }
+    public String getFirstName() {
+        return properties.getProperty("firstName");
+    }
+    public String getLastName() {
+        return properties.getProperty("lastName");
+    }
     public String getEmail() {
         return properties.getProperty("email");
+    }
+    public String getMobileNo() {
+        return properties.getProperty("mobileNo");
     }
     public String getFullAddress() {
         return properties.getProperty("currentAddress");
     }
+    public String getCurrentAddress() {
+        return properties.getProperty("currentAddress");
+    }
+    public String getBirthDate(){
+        return properties.getProperty("date");
+    }
+    public String getState(){
+        return properties.getProperty("state");
+    }
+    public String getCity(){
+        return properties.getProperty("city");
+    }
+
 
     @AfterTest
     public void tearDown() throws InterruptedException {

@@ -3,3 +3,10 @@ browser = Chrome
 fullName = John Doe
 email = test@gmail.com
 currentAddress = 434,Noyatola, Chairman Goli
+
+firstName = John
+lastName = Doe
+mobileNo = 123456789
+state = Haryana
+city = Panipat
+date = 20 Sep 2025
