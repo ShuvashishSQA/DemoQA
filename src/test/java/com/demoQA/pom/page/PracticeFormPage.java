@@ -4,6 +4,7 @@ import com.demoQA.pom.util.BaseTest;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 public class PracticeFormPage extends BaseTest {
     @FindBy(xpath = "//h1[text()='Practice Form']")
@@ -87,10 +88,24 @@ public class PracticeFormPage extends BaseTest {
     }
 
     public PracticeFormPage uploadImage(){
-
+        btnUploadPictures.isDisplayed();
+        btnUploadPictures.click();
         return this;
     }
 
+    public PracticeFormPage fillCurrentAddress( String currentAddress){
+        tfCurrentAddress.isDisplayed();
+        tfCurrentAddress.click();
+        tfCurrentAddress.sendKeys(currentAddress);
+        return this;
+    }
+
+    public PracticeFormPage selectState(String State){
+        dropdownState.isDisplayed();
+        Select state = new Select(dropdownState);
+        dropdownState.sendKeys(State);
+        return this;
+    }
 
 
 }
