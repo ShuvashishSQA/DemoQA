@@ -17,10 +17,12 @@ public class TextBoxPage extends BaseTest {
     WebElement elPermanentAddress;
     @FindBy (id= "submit")
     WebElement btnSubmit;
+    @FindBy(xpath = "//div[text()='Forms']")
+    WebElement btnForms;
     @FindBy(xpath = "//span[text()='Practice Form']")
     WebElement btnPracticeForm;
-    @FindBy(id = "firstName")
-    WebElement elFirstName;
+    @FindBy(xpath = "//div[text()='Elements']")
+    WebElement btnElements;
 
 
 
@@ -54,21 +56,29 @@ public class TextBoxPage extends BaseTest {
     }
     public TextBoxPage clickSubmit(){
         btnSubmit.isDisplayed();
-        btnSubmit.click();
+        moveToElementAndClick(btnSubmit);
+        //btnSubmit.click();
+        return this;
+    }
+    public TextBoxPage clickElement(){
+        btnElements.isDisplayed();
+        moveToElementAndClick(btnElements);
+        //btnElements.click();
         return this;
     }
 
-    public TextBoxPage clickPracticeForm(){
+    public TextBoxPage clickForms(){
+        btnForms.isDisplayed();
+        moveToElementAndClick(btnForms);
+        //btnForms.click();
+        return this;
+    }
+
+    public PracticeFormPage clickPracticeForm(){
         btnPracticeForm.isDisplayed();
-        btnPracticeForm.click();
-        return this;
-    }
-
-    public TextBoxPage insertFirstName(){
-        elFirstName.isDisplayed();
-        elFirstName.clear();
-        elFirstName.sendKeys("Shuvo");
-        return this;
+        moveToElementAndClick(btnElements);
+        //btnPracticeForm.click();
+        return new PracticeFormPage();
     }
 
 }

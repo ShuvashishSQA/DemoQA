@@ -9,6 +9,8 @@
             </class>
             <class name="com.demoQA.pom.test.TextBoxTest">
             </class>
+            <class name="com.demoQA.pom.test.PracticeFormTest">
+            </class>
         </classes>
     </test>
 </suite>

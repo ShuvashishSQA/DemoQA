@@ -2,9 +2,11 @@ package com.demoQA.pom.util;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
@@ -63,6 +65,11 @@ public abstract class BaseTest {
         driver.manage().window().maximize();
     }
 
+    public void moveToElementAndClick(WebElement element) {
+        Actions actions = new Actions(driver);
+        actions.moveToElement(element).click().perform();
+    }
+
     public String getBaseUrl() {
         return properties.getProperty("baseURL");
     }
@@ -103,7 +110,7 @@ public abstract class BaseTest {
 
     @AfterTest
     public void tearDown() throws InterruptedException {
-        Thread.sleep(3000);
+        Thread.sleep(30000);
         driver.quit();
     }
 

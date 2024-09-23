@@ -90,6 +90,7 @@ public class PracticeFormPage extends BaseTest {
     public PracticeFormPage uploadImage(){
         btnUploadPictures.isDisplayed();
         btnUploadPictures.click();
+        btnUploadPictures.sendKeys("C:\\Users\\Mir IT\\Downloads\\Design-1");
         return this;
     }
 
@@ -103,9 +104,21 @@ public class PracticeFormPage extends BaseTest {
     public PracticeFormPage selectState(String State){
         dropdownState.isDisplayed();
         Select state = new Select(dropdownState);
-        dropdownState.sendKeys(State);
+        state.selectByVisibleText(State);
         return this;
     }
 
+    public PracticeFormPage selectCity(String City){
+        dropdownCity.isDisplayed();
+        Select city =new Select(dropdownCity);
+        city.selectByVisibleText(City);
+        return this;
+    }
+
+    public PracticeFormPage clickSubmit(){
+        btnSubmit.isDisplayed();
+        btnSubmit.click();
+        return this;
+    }
 
 }
