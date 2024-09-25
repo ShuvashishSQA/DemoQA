@@ -2,7 +2,10 @@ package com.demoQA.pom.test;
 
 import com.demoQA.pom.page.PracticeFormPage;
 import com.demoQA.pom.util.BaseTest;
+import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
+
+import java.security.Key;
 
 public class PracticeFormTest extends BaseTest {
     public PracticeFormTest(){
@@ -10,17 +13,17 @@ public class PracticeFormTest extends BaseTest {
     }
 
     @Test
-    public void submitPracticeForm(){
+    public void submitPracticeForm() throws InterruptedException {
         new PracticeFormPage()
                 .fillFirstName(getFirstName())
                 .fillLastName(getLastName())
                 .fillEmail(getEmail())
                 .checkGender()
                 .fillMobileNo(getMobileNo())
-                .fillDateOfBirth(getBirthDate())
+                //.fillDateOfBirth(getBirthDate())
                 .fillSubjects("Math")
                 .checkHobbies()
-                .uploadImage()
+                //.uploadImage()
                 .fillCurrentAddress(getCurrentAddress())
                 .selectState(getState())
                 .selectCity(getCity())

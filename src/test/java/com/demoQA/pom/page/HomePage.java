@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 public class HomePage extends BaseTest {
 
     @FindBy(xpath = "//div[@class=\"card-body\"]//h5[text()=\"Elements\"]\n")
-    WebElement btnElements;
+    WebElement btnElement;
 
 
     public HomePage(){
@@ -16,8 +16,8 @@ public class HomePage extends BaseTest {
     }
 
     public ElementPage clickElements(){
-        btnElements.isDisplayed();
-        btnElements.click();
+        btnElement.isDisplayed();
+        btnElement.click();
         return new ElementPage();
     }
 

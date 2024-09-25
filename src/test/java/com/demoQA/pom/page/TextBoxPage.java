@@ -56,28 +56,30 @@ public class TextBoxPage extends BaseTest {
     }
     public TextBoxPage clickSubmit(){
         btnSubmit.isDisplayed();
-        moveToElementAndClick(btnSubmit);
+        //moveToElementAndClick(btnSubmit);
+        scrollAndClick(btnSubmit);
         //btnSubmit.click();
         return this;
     }
-    public TextBoxPage clickElement(){
+/*    public TextBoxPage clickElement(){
         btnElements.isDisplayed();
-        moveToElementAndClick(btnElements);
+        scrollAndClick(btnElements);
+        //moveToElementAndClick(btnElements);
         //btnElements.click();
         return this;
-    }
+    }*/
 
     public TextBoxPage clickForms(){
         btnForms.isDisplayed();
-        moveToElementAndClick(btnForms);
+        scrollAndClick(btnForms);
+        //moveToElementAndClick(btnForms);
         //btnForms.click();
         return this;
     }
 
     public PracticeFormPage clickPracticeForm(){
         btnPracticeForm.isDisplayed();
-        moveToElementAndClick(btnElements);
-        //btnPracticeForm.click();
+        scrollAndClick(btnPracticeForm);
         return new PracticeFormPage();
     }
 
