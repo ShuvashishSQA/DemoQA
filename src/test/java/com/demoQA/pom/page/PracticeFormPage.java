@@ -5,7 +5,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
+
 
 public class PracticeFormPage extends BaseTest {
     @FindBy(xpath = "//h1[text()='Practice Form']")
@@ -22,6 +22,8 @@ public class PracticeFormPage extends BaseTest {
     WebElement tfMobileNumber;
     @FindBy(id = "dateOfBirthInput")
     WebElement calDateOfBirth;
+    @FindBy(xpath = "//div[@class='react-datepicker__day react-datepicker__day--001']")
+    WebElement firstDayOfTheMonth;
     @FindBy(id = "subjectsInput")
     WebElement tfSubjectsInput;
     @FindBy(xpath = "//label[text()='Sports']")
@@ -75,11 +77,13 @@ public class PracticeFormPage extends BaseTest {
         tfMobileNumber.sendKeys(mobile);
         return this;
     }
-    public PracticeFormPage fillDateOfBirth(String date){
+    public PracticeFormPage fillDateOfBirth(){
         calDateOfBirth.isDisplayed();
-        calDateOfBirth.clear();
-        calDateOfBirth.sendKeys(date);
         scrollAndClick(calDateOfBirth);
+        firstDayOfTheMonth.click();
+
+       /* //calDateOfBirth.clear();
+        //calDateOfBirth.sendKeys(date);*/
         return this;
     }
     public PracticeFormPage fillSubjects( String subject){
@@ -95,10 +99,9 @@ public class PracticeFormPage extends BaseTest {
         return this;
     }
 
-    public PracticeFormPage uploadImage(){
+    public PracticeFormPage uploadImage() {
         btnUploadPictures.isDisplayed();
-        btnUploadPictures.click();
-        btnUploadPictures.sendKeys("C:\\Users\\Mir IT\\Downloads\\Design-1");
+        btnUploadPictures.sendKeys("C:\\Users\\Mir IT\\Downloads\\Design-1.jpg");
         return this;
     }
 
@@ -109,7 +112,7 @@ public class PracticeFormPage extends BaseTest {
         return this;
     }
 
-    public PracticeFormPage selectState(String State){
+    public PracticeFormPage selectState(){
         dropdownState.isDisplayed();
         /*Select state = new Select(dropdownState);             //Select doesn't work for non-select(Custom) dropdown
         state.selectByVisibleText(State);*/
@@ -118,7 +121,7 @@ public class PracticeFormPage extends BaseTest {
         return this;
     }
 
-    public PracticeFormPage selectCity(String City){
+    public PracticeFormPage selectCity(){
         dropdownCity.isDisplayed();
         /*Select city =new Select(dropdownCity);                //Select doesn't work for non-select(Custom) dropdown
         city.selectByVisibleText(City);*/
@@ -127,7 +130,7 @@ public class PracticeFormPage extends BaseTest {
         return this;
     }
 
-    public PracticeFormPage clickSubmit() throws InterruptedException {
+    public PracticeFormPage clickSubmit() {
         btnSubmit.isDisplayed();
         btnSubmit.click();
         //btnSubmit.wait(300);

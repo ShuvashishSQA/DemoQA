@@ -5,6 +5,7 @@ import com.demoQA.pom.util.BaseTest;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 
+import java.awt.*;
 import java.security.Key;
 
 public class PracticeFormTest extends BaseTest {
@@ -13,21 +14,20 @@ public class PracticeFormTest extends BaseTest {
     }
 
     @Test
-    public void submitPracticeForm() throws InterruptedException {
+    public void submitPracticeForm() throws InterruptedException{
         new PracticeFormPage()
                 .fillFirstName(getFirstName())
                 .fillLastName(getLastName())
                 .fillEmail(getEmail())
                 .checkGender()
                 .fillMobileNo(getMobileNo())
-                //.fillDateOfBirth(getBirthDate())
+                .fillDateOfBirth()
                 .fillSubjects("Math")
                 .checkHobbies()
-                //.uploadImage()
+                .uploadImage()
                 .fillCurrentAddress(getCurrentAddress())
-                .selectState(getState())
-                .selectCity(getCity())
+                .selectState()
+                .selectCity()
                 .clickSubmit();
-
     }
 }
